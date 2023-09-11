@@ -4,11 +4,91 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>CS50 Survey Form</title>
-        <meta name="description" content="">
+        <meta name="CS50 Student Survey" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+      
+        <!--HEADING AREA-->
+        <div id="heading">
+            <h1 id="title">CS50 Students!</h1>
+            <p id="description">We would love to know your opinions on the course so tell us what you think of the program</p>
 
+        </div>
+
+        <!--INPUT FORM BOXES-->
+        <div id="main">
+         <form id="survey-form">
+            <div id="input-fields">
+
+                <label id="name-label"><b>Name:</b></label>
+                <input id="name" type="name" name="name" class="form" required placeholder="Full Name"><br>
+                <br>
+
+                <label id="email-label"><b>Email:</b></label>
+                <input id="email" type="email" name="email" class="form" required placeholder="example@mail.com"><br>
+                <br>
+                
+                <label id="number-label"><b>Age:</b></label>
+                <input id="number" type="number" name="number" class="form" min="16" max="60" placeholder="16+">
+            </div>
+
+            <!--LANGUAGE DROPDOWN-->
+            <div id="dropdown-div"><br>
+                <label id="dropdown-label"><strong>What programming language are you learning:</strong></label><br>
+                <select id="dropdown" name="code-lang" class="form">
+
+                    <option value="javaScript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="php">PHP</option>
+                </select>
+            </div>
+
+            <!--BUTTON AREA-->
+            <div id="button-area">
+                <br>
+                <label id="job-label"><b>Employment Status</b></label>
+                <br>
+
+                <input type="radio" class="radio-inline" name="status" value="employed" checked>Full-time - employed
+                <br>
+                <input type="radio" class="radio-inline" name="status" value="part-time"> Part-time - Employed
+                <br>
+                <input type="radio" class="radio-inline" name="status" value="applicant"> Unemployed
+                <br>
+                <input type="radio" class="radio-inline" name="status" value="unemployed"> I am a student
+            </div>
+
+            <!--BUTTON AREA-->
+            <div id="button-area">
+                <br>
+                <label id="course-label"><b>What course are you studing:</b></label>
+                <br>
+
+                <input type="checkbox"  name="course1" value="cs" checked>CS50 Intro to Computer Science
+                <br>
+                <input type="checkbox"  name="course2" value="js">CS50 JavaScript & Python
+                <br>
+                <input type="checkbox"  name="course3" value="data" checked>Data Science
+            </div>
+
+            <!--INPUT BOX-->
+            <div id="ending">
+                <br>
+                <br>
+
+                <label id="comments-label">How can we improve this course?</label>
+                <br>
+                <textarea class="form" placeholder="Please write a review..."></textarea>
+                <br>
+                <br>
+
+                <!--SUBMIT BUTTON-->
+                <input id="submit" type="submit" class="form">
+            </div>
+         </form>
+        </div>
     </body>
 </html>
